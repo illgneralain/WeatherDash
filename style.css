@@ -94,3 +94,52 @@ div .card-body{
     font-weight: bolder;
     font-size: 0.9em;
 }
+
+.col-sm .card p{
+    text-align: left;
+    font-size: .8em;
+    color: black;
+    font-weight: bold;
+}
+
+h5{
+    color: blueviolet;
+    font-size: 28px;
+    border: 10px solid greenyellow;
+    text-align: center;
+    background-color: rgb(60, 78, 78);
+}
+
+#weathericon{
+    width: 100px;
+}
+
+.card-body, #five-day{
+    padding: 1px 0 1px 15px;
+    margin: -30px -150px 25px 0;
+
+}
+
+.col-sm-3{ 
+    margin: -30px 25px 10px;
+
+}
+
+.five-cards{
+    background-color: royalblue;
+}
+
+.col-sm div {
+    font-weight: bold;
+    color: purple;
+}
+
+.five-cards:hover{
+    background-color: red;
+}
+#clearhist{
+    background-color: white;
+}
+#clearhist:hover{
+    background-color: red;
+}
