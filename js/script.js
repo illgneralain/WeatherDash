@@ -117,10 +117,13 @@ function citysearch() {
             for (i =1; i<6; i++) {
                 icons[i] = response.daily[i].weather[0].icon;
             }
-            highTemps = highTemps.filter(item => item);
-            for (i =0; i <highTemps.length; i++) {
-                $("#highday" + i).text("High: " + highTemps[i]);
+            icons = icons.filter(item => item);
+            for (i =0; i <icons.length; i++) {
+               iconsURL[i] = "http://openweathermap.org/img/w/" + icons[i] + ".png";
             }
-        })
-    })
+            for (i = 0; i < iconsURL.length; i++) {
+                $("#icon" + i).attr({"src": iconsURL[i], "alt": "Daily Weather Icon"});
+            }
+        });
+    });
 }
