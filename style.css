@@ -143,3 +143,15 @@ h5{
 #clearhist:hover{
     background-color: red;
 }
+.btn{
+    background-color: salmon;
+    color: lightgrey;
+    font-size: 12px;
+}
+.btn:hover{
+    background: red;
+}
+#cityenter{
+    padding: 20px;
+}
+ 
