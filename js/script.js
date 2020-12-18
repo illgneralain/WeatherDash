@@ -28,7 +28,7 @@ function citysearch() {
     cityname + "&units=imperial&appid=e7c303b6206e1039548ab3f11d2207b3";
 
     $.ajax({
-        url: firstQueryURL
+        url: firstQueryURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
