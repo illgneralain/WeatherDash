@@ -58,3 +58,39 @@ li{
     font-style: italic;
 
 }
+
+ul p{
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+h6,h5{
+    font-weight: bold;
+}
+
+div #forecast{
+    padding-top: 1px;
+    padding-bottom: 25px;
+}
+
+div .card-body{
+    background-color: lightgrey;
+    color: black;
+}
+
+.col-sm .card{
+    border-radius: 35px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px #87cefa;
+    height: 250px;
+    width: 150px;
+    margin-top: -10px;
+    padding-top: 20px;
+}
+
+.col-sm .card div{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 0.9em;
+}
