@@ -36,4 +36,25 @@ ul li,form,p {
 }
 ul #listcity{
     margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.c:hover {
+    background-color: red;
+}
+section button{
+    width: 255px;
+    height: 45px;
+}
+
+section button:hover{
+    background-color: red;
+}
+
+li{
+    height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+
 }
