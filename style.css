@@ -1,3 +1,39 @@
 * {
     max-width: 100vw;
 }
+
+body{
+    font-style: italic;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+nav{
+    color: lightseagreen;
+    font-size: 55px;
+    text-align: right;
+}
+
+.jumbotron {
+    text-align: center;
+    color: #87cefa;
+    border-radius: 0;
+    border-bottom: 10px solid rgb(40, 38, 38);
+    padding: 2px;
+}
+
+.jumbotron h1{
+    font-weight: bold;
+}
+
+.list-group {
+    background-color: seagreen;
+}
+
+ul li,form,p {
+    border: black;
+    margin: 12px;
+}
+ul #listcity{
+    margin-top: 5px;
+}
