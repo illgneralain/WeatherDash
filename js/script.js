@@ -113,8 +113,9 @@ function citysearch() {
                 $("#humday" + i).text("Humidity: " + hums[i]);
             }
             var icons = [];
+            var iconsURL = [];
             for (i =1; i<6; i++) {
-                highTemps[i] = parseInt(response.daily[i].temp.max) + "F";
+                icons[i] = response.daily[i].weather[0].icon;
             }
             highTemps = highTemps.filter(item => item);
             for (i =0; i <highTemps.length; i++) {
