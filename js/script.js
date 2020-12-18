@@ -42,6 +42,18 @@ function citysearch() {
         $("#tempcity").text($currentTemp);
         $("#windspeed").text($currentWind);
         $("#humcity").text($currentHum);
+// Latitude and Longitude 
 
+        var secondQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon +
+        "&exclude=hourly&units=imperial&appid=e7c303b6206e1039548ab3f11d2207b3";
+        $.ajax({
+            url: secondQueryURL, method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            var $uv = response.current.uvi;
+            var $uvIndex = $("#uv-index");
+            $uvIndex.text($uv);
+            $uvIndex.blur();
+        })
     })
 }
