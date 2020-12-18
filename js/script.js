@@ -12,3 +12,8 @@ $("input").keyup(function() {
         $clicked.click();
     }
 })
+
+// function for searching city name 
+function citysearch() {
+    var cityname = ($(this).parent()).siblings("#cityenter")).val().toLowerCase(); 
+}
