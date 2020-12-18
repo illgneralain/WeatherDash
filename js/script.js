@@ -104,6 +104,22 @@ function citysearch() {
             for (i =0; i <lowTemps.length; i++) {
                 $("#lowday" + i).text("Low: " + highTemps[i]);
             }
+            var hums = [];
+            for (i =1; i<6; i++) {
+                hums[i] = parseInt(response.daily[i].humidity) + "%";
+            }
+            hums = hums.filter(item => item);
+            for (i =0; i <hums.length; i++) {
+                $("#humday" + i).text("Humidity: " + hums[i]);
+            }
+            var icons = [];
+            for (i =1; i<6; i++) {
+                highTemps[i] = parseInt(response.daily[i].temp.max) + "F";
+            }
+            highTemps = highTemps.filter(item => item);
+            for (i =0; i <highTemps.length; i++) {
+                $("#highday" + i).text("High: " + highTemps[i]);
+            }
         })
     })
 }
