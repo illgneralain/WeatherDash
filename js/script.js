@@ -88,6 +88,22 @@ function citysearch() {
             }
             //check if days are being logged correctly 
             console.log(days);
+            var highTemps = [];
+            for (i =1; i<6; i++) {
+                highTemps[i] = parseInt(response.daily[i].temp.max) + "F";
+            }
+            highTemps = highTemps.filter(item => item);
+            for (i =0; i <highTemps.length; i++) {
+                $("#highday" + i).text("High: " + highTemps[i]);
+            }
+            var lowTemps = [];
+            for (i =1; i<6; i++) {
+                lowTemps[i] = parseInt(response.daily[i].temp.min) + "F";
+            }
+            lowTemps = lowTemps.filter(item => item);
+            for (i =0; i <lowTemps.length; i++) {
+                $("#lowday" + i).text("Low: " + highTemps[i]);
+            }
         })
     })
 }
