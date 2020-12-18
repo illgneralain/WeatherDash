@@ -54,6 +54,28 @@ function citysearch() {
             var $uvIndex = $("#uv-index");
             $uvIndex.text($uv);
             $uvIndex.blur();
+
+            if ($uv <= 2) {
+                $uvIndex.addClass("btn-success");
+                $uvIndex.removeClass("btn-warning btn-hazard btn-danger btn-climate-change");
+            }
+            else if ($uv <=5) {
+                $uvIndex.addClass("btn-warning");
+                $uvIndex.removeClass("btn-success btn-hazard btn-danger btn-climate-change");
+            }
+            else if ($uv <=7) {
+                    $uvIndex.addClass("btn-hazard");
+                    $uvIndex.removeClass("btn-success btn-warning btn-danger btn-climate-change");
+            }
+            else if ($uv <=10.50) {
+                        $uvIndex.addClass("btn-danger");
+                        $uvIndex.removeClass("btn-success btn-hazard btn-warning btn-climate-change");
+            }
+            else if ($uv >=11) {
+                $uvIndex.addClass("btn-climate-change");
+                $uvIndex.removeClass("btn-success btn-hazard btn-danger btn-danger");
+            }
+            
         })
     })
 }
