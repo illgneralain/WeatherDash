@@ -37,5 +37,11 @@ function citysearch() {
         var $currentWind = parseInt(response.wind.speed) + "mph"
         var $currentIconURL = "http://openweathermap.org/img/w/" + $currentIcon + ".png";
         var $currentHum = response.main.humidity + "%";
+
+        $("namecity").text(cityname);
+        $("tempcity").text($currentTemp);
+        $("windspeed").text($currentWind);
+        $("humcity").text($currentHum);
+
     })
 }
