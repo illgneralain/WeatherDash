@@ -6,4 +6,9 @@ $cityDate("#currentdate").text ($cityDate);
 var $clicked = $(".buttonsearch");
 $clicked.on("click", citysearch);
 $clicked.on("click", searchSave);
-$clicked.
+// add event listener for enter 
+$("input").keyup(function() {
+    if (event.key === "Enter") {
+        $clicked.click();
+    }
+})
