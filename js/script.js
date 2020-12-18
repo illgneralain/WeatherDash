@@ -26,4 +26,16 @@ function citysearch() {
 
     var firstQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityname + "&units=imperial&appid=e7c303b6206e1039548ab3f11d2207b3";
+
+    $.ajax({
+        url: firstQueryURL
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        // Variables for current conditions 
+        var $currentTemp = parseInt(response.main.temp) + "F";
+        var $currentWind = parseInt(response.wind.speed) + "mph"
+        var $currentIconURL = "http://openweathermap.org/img/w/" + $currentIcon + ".png";
+        var $currentHum = response.main.humidity + "%";
+    })
 }
