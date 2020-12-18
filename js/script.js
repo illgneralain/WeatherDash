@@ -16,4 +16,14 @@ $("input").keyup(function() {
 // function for searching city name 
 function citysearch() {
     var cityname = (($(this).parent()).siblings("#cityenter")).val().toLowerCase(); 
+    // val used as the type of local variable  
+    function clear (){
+        $("#cityenter").val("");
+    }
+    setTimeout(clear, 300);
+
+    // Openweather API usage
+
+    var firstQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +
+    cityname + "&units=imperial&appid=e7c303b6206e1039548ab3f11d2207b3";
 }
