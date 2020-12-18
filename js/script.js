@@ -154,6 +154,21 @@ $(document).ready(function () {
         { $("#search" + i).text(historydispl[i])};
         $("#search" + i).addClass("past");
     }
-}
+
 
 $("section").on("click", ".past", savedsearch);
+
+function savedsearch() {
+    var $oldCity = $(this).text();
+    $("#cityenter").val($oldCity);
+    $clicked.trigger("click");
+}
+
+var $clear = $("#clearhist");
+$clear.on("click", function () {
+    localStorage.clear();
+    historydispl = []
+    for (i=0; i<11; i++) {
+        $("#search" + i).text("");
+    }
+});
