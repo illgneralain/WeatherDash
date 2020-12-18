@@ -75,7 +75,19 @@ function citysearch() {
                 $uvIndex.addClass("btn-climate-change");
                 $uvIndex.removeClass("btn-success btn-hazard btn-danger btn-danger");
             }
-            
+            var days = []
+            for (i = 1; i <6; i++) {
+                days [1] = response.daily[i].dt;
+            }
+            days = days.filter(item => item);
+            for (i = 0; i < days.length; i++) {
+                days [i] = moment.unix(days[i]);
+                days [i] =days[i].format("ddd, ll");
+                // display date 
+                $("#day" + i).text(days[i]);
+            }
+            //check if days are being logged correctly 
+            console.log(days);
         })
     })
 }
