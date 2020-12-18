@@ -127,3 +127,33 @@ function citysearch() {
         });
     });
 }
+// Local Storage
+$(document).ready(function () {
+    if (localStorage.getItem("cities")) {
+        historydispl = localStorage.getItem("cities", JSON.stringify(historydispl));
+        historydispl = JSON.parse(historydispl);
+
+        for (i=0; i <= historydispl.length - 1; i++) {
+            $("#search" + 1).text(historydispl[i]);
+        }
+
+        var lastIndex = (historydispl.length - 1);
+        $("#search" + lastIndex).on("click", savedsearch);
+        $("#search" + lastIndex).trigger("click");
+    }
+});
+
+    var historydispl = [];
+    function searchSave() {
+        var newcity = (($(this).parent()).siblings("#cityenter")).val().toLowerCase();
+        console.log(newcity);
+        historydispl.push(newcity);
+        historydispl = [...new Set(historydispl)];
+        localStorage.setItem("cities", JSON.stringify(historydispl));
+        for (i =0; i <= historydispl.length -1; i++)
+        { $("#search" + i).text(historydispl[i])};
+        $("#search" + i).addClass("past");
+    }
+}
+
+$("section").on("click", ".past", savedsearch);
